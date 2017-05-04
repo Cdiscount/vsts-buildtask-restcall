@@ -1,6 +1,9 @@
 # This repository contains the code of a Tfs build task that allows to call a REST webservice from a build or a release definition.
 This build task allows to call a rest service using the TFS GUI to parameterize the call.
 
+It is available on the Visual Studio Team Services marketplace : https://marketplace.visualstudio.com/items?itemName=CdiscountAlm.rest-call-build-task
+
+
 # Use Visual studio code to work on this extension
 1. Execute the following command to install vscode:
    ~~~ 
