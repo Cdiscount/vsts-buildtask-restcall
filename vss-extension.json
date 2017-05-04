@@ -1,0 +1,53 @@
+{
+    "manifestVersion": 1,
+    "id": "rest-call-build-task",
+    "version": "0.0.47",
+    "name": "Rest Call",
+    "description": "Build task to allow rest call to a webservice during a build or a release.",
+    "publisher": "CdiscountAlm",
+    "targets": [
+        {
+            "id": "Microsoft.VisualStudio.Services"
+        }
+    ],
+    "content": {
+        "details": {
+            "path": "overview.mdtoto"
+        }
+    },
+    "categories": [
+        "Build and release"
+    ],
+	"galleryFlags": [
+        "Public"
+    ],
+    "tags": [
+        "webservice",
+        "web service",
+        "rest",
+		"json",
+		"request"
+    ],
+    "icons": {
+        "default": "images/logo.png"
+    },
+    "contributions": [
+        {
+            "id": "custom-build-task",
+            "type": "ms.vss-distributed-task.task",
+            "targets": [
+                "ms.vss-distributed-task.tasks"
+            ],
+            "properties": {
+                "name": "restCallBuildTask"
+            }
+        }
+    ],
+ 
+    "files": [
+        {
+            "path": "restCallBuildTask"
+        }
+    ]
+}
+
