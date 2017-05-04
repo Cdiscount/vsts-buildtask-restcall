@@ -9,7 +9,7 @@ This build task allows to call a rest service using the TFS GUI to parameterize 
 1. clone this repository:
    ~~~ 
    cd <myParentGitFolder>
-   git clone 
+   git clone https://github.com/Cdiscount/vsts-buildtask-restcall.git
    cd vsts-buildtask-restcall
    ~~~
 1. Retrieve the npm package to allow compilation under vscode:
