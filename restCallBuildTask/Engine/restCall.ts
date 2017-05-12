@@ -10,7 +10,8 @@ export module Engine{
 			this._outputFilePath = outputFilePath;	
 		}
 
-		call(webServiceUrl: string, httpVerb: string, body: string, useBasicAuthentication: Boolean, username: string, password: string, contentType:string, timeout: number){
+		call(webServiceUrl: string, httpVerb: string, body: string, useBasicAuthentication: Boolean, username: string, password: string, contentType:string, timeout: number, allowInvalidSSLCertificate: Boolean){
+			let useStrictSSL = !allowInvalidSSLCertificate
 			if(useBasicAuthentication){
 				request({
 					uri: webServiceUrl,
@@ -24,7 +25,8 @@ export module Engine{
 						user: username,
 						pass: password
 					},
-					timeout: timeout
+					timeout: timeout,
+					strictSSL: useStrictSSL
 				}, this.callBack);
 			}
 			else {
@@ -35,7 +37,8 @@ export module Engine{
           					'content-type' : contentType
         				},
 					body: body,
-					timeout: timeout
+					timeout: timeout,
+					strictSSL: useStrictSSL
 				}, this.callBack.bind(this));
 			}
 		}
