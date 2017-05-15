@@ -27,7 +27,7 @@ export module Engine{
 					},
 					timeout: timeout,
 					strictSSL: useStrictSSL
-				}, this.callBack);
+				}, this.callBack.bind(this));
 			}
 			else {
 				request({
