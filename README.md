@@ -28,7 +28,7 @@ It is available on the Visual Studio Team Services marketplace : https://marketp
 
 * note: if it doesn't compile correctly, verify that you do not have a path to a bad typescript version (remove path like "C:\Program Files (x86)\Microsoft SDKs\TypeScript\1.0\; " from your PATH (system&user) environment variables).
 
-# Create the extension and publish it
+# Create the extension
 1. If you update the task/extension (not needed on creation) : increment the version number in the task.json file.
 1. If you update the task/extension (not needed on creation) : increment the version number in the vss-extension.json file.
 1. use the tfx framework, in the root folder of the git repository (where the file vss-extension.json is located), execute:

@@ -90,6 +90,14 @@
       "required": true,
       "visibleRule": "saveResponseToFile = true",
       "helpMarkDown": "Output file path to write response into."
+    },
+    {
+      "name": "allowInvalidSSLCertificate",
+      "type": "boolean",
+      "label": "Allow invalid SSL Certificate?",
+      "defaultValue": false,
+      "required": true,
+      "helpMarkDown": "Do you want to call a URL that has an invalid SSL certificate?"
     }
   ],
   "execution": {
