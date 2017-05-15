@@ -1,7 +1,7 @@
 {
     "manifestVersion": 1,
     "id": "rest-call-build-task",
-    "version": "0.0.47",
+    "version": "0.0.48",
     "name": "Rest Call",
     "description": "Build task to allow rest call to a webservice during a build or a release.",
     "publisher": "CdiscountAlm",
@@ -12,12 +12,16 @@
     ],
     "content": {
         "details": {
-            "path": "overview.mdtoto"
+            "path": "overview.md"
         }
     },
     "categories": [
         "Build and release"
     ],
+    "repository": {
+        "type": "git",
+        "uri": "https://github.com/Cdiscount/vsts-buildtask-restcall"
+    },
 	"galleryFlags": [
         "Public"
     ],

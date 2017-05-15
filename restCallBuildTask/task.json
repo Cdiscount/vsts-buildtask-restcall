@@ -4,7 +4,7 @@
   "friendlyName": "Rest Call",
   "description": "Build task to allow rest call during build or release.",
   "author": "Cdiscount Alm / Sylvain Marangon",
-  "helpMarkDown": "Replace with markdown to show in help.",
+  "helpMarkDown": "Build task to allow rest call during build or release.",
   "category": "Utility",
   "visibility": [
     "Build",
@@ -14,7 +14,7 @@
   "version": {
     "Major": "0",
     "Minor": "1",
-    "Patch": "47"
+    "Patch": "48"
   },
   "minimumAgentVersion": "1.95.0",
   "instanceNameFormat": "Rest call $(httpVerb) $(relativeUrl)",
