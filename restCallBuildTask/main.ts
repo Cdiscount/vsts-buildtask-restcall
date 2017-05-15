@@ -13,6 +13,7 @@ class Main{
             outputFilePath = tl.getPathInput("outputFilePath", false);
         }
 
+        let allowInvalidSSLCertificate = tl.getBoolInput('allowInvalidSSLCertificate', true)
         let webServiceEndpoint = tl.getInput('webserviceEndpoint', true);
         let relativeUrl = tl.getInput('relativeUrl', false);
         let webServiceEndpointUrl = tl.getEndpointUrl(webServiceEndpoint, false);
@@ -43,7 +44,7 @@ class Main{
 
         let contentType = tl.getInput('contentType', true);
 
-        new Engine.RestCall(saveResponseToFile, outputFilePath).call(finalUrl, httpVerb, body, useBasicAuthentication, webServiceEndpointUsername, webServiceEndpointPassword, contentType, timeoutValue);
+        new Engine.RestCall(saveResponseToFile, outputFilePath).call(finalUrl, httpVerb, body, useBasicAuthentication, webServiceEndpointUsername, webServiceEndpointPassword, contentType, timeoutValue, allowInvalidSSLCertificate);
     }
 }
 
