@@ -13,8 +13,8 @@
   "demands": [],
   "version": {
     "Major": "0",
-    "Minor": "1",
-    "Patch": "50"
+    "Minor": "2",
+    "Patch": "0"
   },
   "minimumAgentVersion": "1.95.0",
   "instanceNameFormat": "Rest call $(httpVerb) $(relativeUrl)",
@@ -57,6 +57,14 @@
       "required": false,
 	    "visibleRule": "httpVerb = POST || httpVerb = PUT",
       "helpMarkDown": "The body of the web service call"
+    },
+    {
+      "name": "headers",
+      "type": "multiLine",
+      "label": "Headers",
+      "defaultValue": "{}",
+      "required": false,
+      "helpMarkDown": "Headers in JSON format: {\"X-API-Key\": \"abcdef\"}"
     },
     {
       "name": "timeout",

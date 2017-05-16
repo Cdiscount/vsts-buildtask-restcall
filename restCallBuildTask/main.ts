@@ -44,7 +44,16 @@ class Main{
 
         let contentType = tl.getInput('contentType', true);
 
-        new Engine.RestCall(saveResponseToFile, outputFilePath).call(finalUrl, httpVerb, body, useBasicAuthentication, webServiceEndpointUsername, webServiceEndpointPassword, contentType, timeoutValue, allowInvalidSSLCertificate);
+        let headers = tl.getInput('headers', false);
+
+        // This might throw if invalid JSON.
+        try {
+            headers = JSON.parse(headers);
+        } catch (e) {
+            throw new Error("Invalid headers JSON format.");
+        }
+
+        new Engine.RestCall(saveResponseToFile, outputFilePath).call(finalUrl, httpVerb, body, useBasicAuthentication, webServiceEndpointUsername, webServiceEndpointPassword, contentType, timeoutValue, allowInvalidSSLCertificate, headers);
     }
 }
 
