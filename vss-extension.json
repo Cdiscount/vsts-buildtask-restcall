@@ -1,7 +1,7 @@
 {
     "manifestVersion": 1,
     "id": "rest-call-build-task",
-    "version": "0.0.50",
+    "version": "0.2.0",
     "name": "Rest Call",
     "description": "Build task to allow rest call to a webservice during a build or a release.",
     "publisher": "CdiscountAlm",
