@@ -14,7 +14,7 @@
   "version": {
     "Major": "0",
     "Minor": "1",
-    "Patch": "51"
+    "Patch": "52"
   },
   "minimumAgentVersion": "1.95.0",
   "instanceNameFormat": "Rest call $(httpVerb) $(relativeUrl)",
@@ -42,7 +42,8 @@
           "GET":  "GET",
           "POST":  "POST",
           "PUT":  "PUT",
-          "DELETE": "DELETE"
+          "DELETE": "DELETE",
+          "PATCH": "PATCH"
 	      }, 
       "label": "Http method",
       "defaultValue": "GET",
@@ -55,7 +56,7 @@
       "label": "Body",
       "defaultValue": "",
       "required": false,
-	    "visibleRule": "httpVerb = POST || httpVerb = PUT",
+	    "visibleRule": "httpVerb = POST || httpVerb = PUT || httpVerb = PATCH",
       "helpMarkDown": "The body of the web service call"
     },
     {
