@@ -14,10 +14,17 @@
   "version": {
     "Major": "0",
     "Minor": "1",
-    "Patch": "52"
+    "Patch": "53"
   },
   "minimumAgentVersion": "1.95.0",
   "instanceNameFormat": "Rest call $(httpVerb) $(relativeUrl)",
+  "groups": [
+        {
+            "name": "advanced",
+            "displayName": "Advanced",
+            "isExpanded": false
+        }
+    ],
   "inputs": [
     {
       "name": "webserviceEndpoint",
@@ -60,22 +67,6 @@
       "helpMarkDown": "The body of the web service call"
     },
     {
-      "name": "headers",
-      "type": "multiLine",
-      "label": "Headers",
-      "defaultValue": "{}",
-      "required": false,
-      "helpMarkDown": "Headers in JSON format: {\"X-API-Key\": \"abcdef\"}"
-    },
-    {
-      "name": "timeout",
-      "type": "string",
-      "label": "Timeout (in milliseconds)",
-      "defaultValue": "120000",
-      "required": false,
-      "helpMarkDown": "Timeout to use during the webservice call (in milliseconds)."
-    },
-    {
       "name": "contentType",
       "type": "string",
       "label": "Content-Type",
@@ -101,12 +92,31 @@
       "helpMarkDown": "Output file path to write response into."
     },
     {
+      "name": "headers",
+      "type": "multiLine",
+      "label": "Http Headers",
+      "defaultValue": "{}",
+      "required": false,
+      "groupName": "advanced",
+      "helpMarkDown": "Headers in JSON format: {\"X-API-Key\": \"abcdef\"}"
+    },
+    {
       "name": "allowInvalidSSLCertificate",
       "type": "boolean",
       "label": "Allow invalid SSL Certificate?",
       "defaultValue": false,
       "required": true,
+      "groupName": "advanced",
       "helpMarkDown": "Do you want to call a URL that has an invalid SSL certificate?"
+    },
+    {
+      "name": "timeout",
+      "type": "string",
+      "label": "Timeout (in milliseconds)",
+      "defaultValue": "120000",
+      "required": false,
+      "groupName": "advanced",
+      "helpMarkDown": "Timeout to use during the webservice call (in milliseconds)."
     }
   ],
   "execution": {
